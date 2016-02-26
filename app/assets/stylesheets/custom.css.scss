@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+#nav-logo {
+	font-family: "Georgia", Times, serif;
+	font-style: oblique;
+	color: white;
+}
+
+body {
+	background: #ffd9a6
+}

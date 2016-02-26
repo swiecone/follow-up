@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FollowUp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class='container'>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <%= link_to root_path, class: 'navbar-brand' do %>
+      <div id="nav-logo">
+      	<i class="fa fa-heart-o "></i>
+      	The Love Hub
+      </div>
+      <% end %>
+    </div>
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+      
+
+
+      <ul class="nav navbar-nav navbar-right">
+      <%= link_to "About", about_path, class: 'navbar-brand' %> 
+        <% if false#user_signed_in? %>
+          <%= link_to "Sign Out", "#", method: :delete, class: 'btn btn-danger navbar-btn' %>
+        <% else %>
+          <%= link_to "Log In", "#", class: 'btn btn-success navbar-btn', method: :get %> 
+        <% end %>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
