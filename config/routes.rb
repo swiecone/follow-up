@@ -4,6 +4,13 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/about' => 'pages#about'
+
+
+  get '/login', to: "logins#new"
+  post '/login', to: "logins#create", as: 'access'
+  get '/logout', to: "logins#destroy"
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
